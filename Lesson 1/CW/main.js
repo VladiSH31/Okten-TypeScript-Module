@@ -63,36 +63,39 @@
 //         },
 //     },
 // ]
-class User {
-    // name: string ;
-    // age: number;
-    // status: boolean;
-    constructor(name, age, status) {
-        this.name = name;
-        this.age = age;
-        this.status = status;
-        this.name = name;
-        this.age = age;
-        this.status = status;
-    }
-}
-let users = [
-    {
-        greeting(str) {
-            return 'Hello1';
-        },
-        name: 'Oleg',
-        age: 23,
-        status: true
-    },
-    {
-        name: 'Vasya',
-        age: 29,
-        status: false,
-        greeting: function (str) {
-            return 'Hello2';
-        },
-    },
-    new User('John', 25, true),
-];
-console.log(users);
+// class Users {
+//     name: string ;
+//     age: number;
+//     status: boolean;
+//
+//     constructor(name: string, age: number, status: boolean) {
+//         this.name = name;
+//         this.age = age;
+//         this.status = status;
+//     }
+//
+//     greeting?: (str: string) => string
+// }
+//
+// let users: Users[] = [
+//     {
+//         greeting(str: string) {
+//             return 'Hello1'
+//         },
+//         name: 'Oleg',
+//         age: 23,
+//         status: true
+//     },
+//     {
+//
+//         name: 'Vasya',
+//         age: 29,
+//         status: false,
+//         greeting: function (str: string) {
+//             return 'Hello2'
+//         },
+//     },
+//
+// ]
+//
+// console.log(users)
