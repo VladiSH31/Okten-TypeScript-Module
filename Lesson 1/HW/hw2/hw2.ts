@@ -256,7 +256,7 @@ type coursesType = {
     monthDuration: number
 }
 
-let coursesArray: coursesType[] = [
+let courseArray: coursesType[] = [
     {title: 'JavaScript Complex', monthDuration: 5},
     {title: 'Java Complex', monthDuration: 6},
     {title: 'Python Complex', monthDuration: 6},
@@ -265,21 +265,21 @@ let coursesArray: coursesType[] = [
     {title: 'Frontend', monthDuration: 4}
 ];
 
-if (coursesArray[0].monthDuration > 5) {
+if (courseArray[0].monthDuration > 5) {
     console.log("Super")
 }
-if (coursesArray[1].monthDuration > 5) {
+if (courseArray[1].monthDuration > 5) {
     console.log("Super")
 }
-if (coursesArray[2].monthDuration > 5) {
+if (courseArray[2].monthDuration > 5) {
     console.log("Super")
 }
-if (coursesArray[3].monthDuration > 5) {
+if (courseArray[3].monthDuration > 5) {
     console.log("Super")
 }
-if (coursesArray[4].monthDuration > 5) {
+if (courseArray[4].monthDuration > 5) {
     console.log("Super")
 }
-if (coursesArray[5].monthDuration > 5) {
+if (courseArray[5].monthDuration > 5) {
     console.log("Super")
 }
