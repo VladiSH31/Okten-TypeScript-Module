@@ -43,7 +43,7 @@ console.log(users);
 let ovenUsers: User12[] = users.filter((user: User12) => user.id % 2 === 0);
 console.log(ovenUsers);
 
-// #pOeHKct
+// #pOeHKct.
 // – Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
 
 let sortedUsers: User12[] = users.sort((user1, user2) => {
