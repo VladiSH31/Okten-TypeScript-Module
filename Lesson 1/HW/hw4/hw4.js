@@ -59,7 +59,7 @@ liWriterFactory('repeat', 4);
 // #gEFoxMMO
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список (ul li) та
 // виводить його через document.write
-let arr = [1, 2, 0, 'Hello', false];
+let array = [1, 2, 0, 'Hello', false];
 function arrayDisplay1(array) {
     document.write(`<ul>`);
     for (let i = 0; i < array.length; i++) {
@@ -68,10 +68,7 @@ function arrayDisplay1(array) {
     }
     document.write(`</ul>`);
 }
-arrayDisplay1(arr);
-// #bovDJDTIjt
-// - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
-// Для кожного об'єкту окремий блок.
+arrayDisplay1(array);
 let arrayobject = [
     { id: 1, name: 'John', age: 20 },
     { id: 2, name: 'Jacob', age: 30 },
@@ -80,8 +77,8 @@ let arrayobject = [
 ];
 function objectDisplay(array) {
     for (const arrayElement of array) {
-        for (const ElementKey in arrayElement) {
-            document.write(ElementKey, ' ', arrayElement[ElementKey], ' ');
+        for (const [key, value] of Object.entries(arrayElement)) {
+            document.write(key, ' ', value, ' ');
         }
     }
 }
@@ -127,9 +124,6 @@ function swap(arr, index1, index2) {
     return arr;
 }
 console.log(swap([11, 22, 33, 44], 0, 1));
-// #mkGDenYnNjn
-// - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
-// Приклад exchange(10000,[{currency:'USD',value:25},{currency:'EUR',value:42}],'USD') // => 400
 function exchange(sumUAH, currencyValues, exchangeCurrency) {
     for (const currencyValue of currencyValues) {
         if (currencyValue.currency === exchangeCurrency) {

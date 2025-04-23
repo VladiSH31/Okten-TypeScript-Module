@@ -114,8 +114,8 @@ let arrayobject:IObject[] = [
 
 function objectDisplay(array:IObject[]) {
     for (const arrayElement of array) {
-        for (const ElementKey in arrayElement) {
-            document.write(ElementKey, ' ', arrayElement[ElementKey], ' ');
+        for (const [key, value] of Object.entries(arrayElement)) {
+            document.write(key, ' ', value, ' ');
         }
     }
 }
@@ -125,7 +125,7 @@ objectDisplay(arrayobject);
 // #pghbnSB
 // - створити функцію яка повертає найменьше число з масиву
 
-function maxNumber(arr) {
+function maxNumber(arr: number[]) {
     let maxNum = 0;
     for (const number of arr) {
         if (number > maxNum) {
@@ -135,7 +135,7 @@ function maxNumber(arr) {
     return maxNum;
 }
 
-function minNumber(arr) {
+function minNumber(arr: number[]) {
     let minNum = maxNumber(arr);
     for (const item of arr) {
         if (item < minNum) {
@@ -150,7 +150,7 @@ console.log(minNumber([56, 34, 11, 99, 121, 12, 66, 45, 144]));
 // #EKRNVPM
 // - створити функцію sum(arr) яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
 
-function sum(arr) {
+function sum(arr: number[]) {
     let sum = 0;
     for (const arrElement of arr) {
         sum += arrElement;
@@ -164,7 +164,7 @@ console.log(sum([1, 2, 10]));
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відповідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
 
-function swap(arr, index1, index2) {
+function swap(arr: number[], index1: number, index2: number) {
     let temp = arr[index1];
     arr[index1] = arr[index2];
     arr[index2] = temp;
@@ -177,7 +177,12 @@ console.log(swap([11, 22, 33, 44], 0, 1));
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:25},{currency:'EUR',value:42}],'USD') // => 400
 
-function exchange(sumUAH, currencyValues, exchangeCurrency) {
+type currencyType = {
+    currency: string,
+    value: number
+}
+
+function exchange(sumUAH: number, currencyValues: currencyType[], exchangeCurrency: string) {
 
     for (const currencyValue of currencyValues) {
         if (currencyValue.currency === exchangeCurrency) {
