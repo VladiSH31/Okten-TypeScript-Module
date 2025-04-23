@@ -40,13 +40,13 @@ console.log(users);
 //
 // – Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об’єкти з парними id (filter)
 
-let ovenUsers = users.filter(user => user.id % 2 === 0);
+let ovenUsers: User12[] = users.filter((user: User12) => user.id % 2 === 0);
 console.log(ovenUsers);
 
 // #pOeHKct
 // – Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
 
-let sortedUsers = users.sort((user1, user2) => {
+let sortedUsers: User12[] = users.sort((user1, user2) => {
     return user2.id - user1.id;
 })
 
