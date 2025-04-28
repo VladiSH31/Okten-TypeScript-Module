@@ -17,3 +17,6 @@ async function foobar() {
     return await fetch('https://jsonplaceholder.typicode.com/users')
         .then(value => value.json());
 }
+let s = 'string';
+let g = true;
+let f = 0;

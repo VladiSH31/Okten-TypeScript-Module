@@ -94,7 +94,7 @@ type coursesType13 = {
     monthDuration: number
 }
 
-let coursesAndDurationArray: coursesType13[] = [
+let coursesAndDurationArray1: coursesType13[] = [
     {title: 'JavaScript Complex', monthDuration: 5},
     {title: 'Java Complex', monthDuration: 6},
     {title: 'Python Complex', monthDuration: 6},
@@ -104,13 +104,13 @@ let coursesAndDurationArray: coursesType13[] = [
 ];
 //  -- відсортувати його за спаданням за monthDuration
 
-let sortedCourses: coursesType13[] = coursesAndDurationArray.sort((a, b) => {
+let sortedCourses: coursesType13[] = coursesAndDurationArray1.sort((a, b) => {
     return b.monthDuration - a.monthDuration
 })
 console.log(sortedCourses);
 //  -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
 
-let filtredDuration: coursesType13[] = coursesAndDurationArray.filter(value => value.monthDuration >= 5);
+let filtredDuration: coursesType13[] = coursesAndDurationArray1.filter(value => value.monthDuration >= 5);
 console.log(filtredDuration);
 
 //  -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
@@ -121,7 +121,7 @@ type newCoursesType = {
     id: number
 }
 
-let mapedCourses:coursesType13[] = coursesAndDurationArray.map((value: coursesType, index: number) => {
+let mapedCourses:coursesType13[] = coursesAndDurationArray1.map((value: coursesType, index: number) => {
     let newCourse: newCoursesType = {
         title: value.title,
         monthDuration: value.monthDuration,
@@ -249,7 +249,7 @@ type coursesType12 = {
     modules: string[]
 }
 
-let coursesArray: coursesType12[] = [
+let coursesArray1: coursesType12[] = [
     {
         title: 'JavaScript Complex',
         monthDuration: 5,

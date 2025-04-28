@@ -1,3 +1,4 @@
+"use strict";
 //#Kx1xgoKy8
 // – Є масив
 // let coursesAndDurationArray = [
@@ -8,25 +9,7 @@
 //     {title: ‘FullStack’, monthDuration: 7},
 //     {title: ‘Frontend’, monthDuration: 4}
 // ];
-
-// За допомоги скріпта для кожного елементу масиву зробити <div class=’item’> ,  в якому буде <h1 class=’heading’>  з title  елементу,
-// та <p class=’description’> з monthDuration елементу.
-// Завдання робити через цикли.
-
-
-//– Є масив coursesArray котрий лежить в arrays.js (на цей момент ви вже знаєте де він знаходиться)
-// Створити для кожного елементу масиву свій блок, блок розділити блоками,
-// в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
-// Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом/
-
-type course13 = {
-    title: string,
-    monthDuration: number,
-    hourDuration: number,
-    modules: string[]
-}
-
-let coursesArray: course13[] = [
+let coursesArray = [
     {
         title: 'JavaScript Complex',
         monthDuration: 5,
@@ -96,24 +79,20 @@ let coursesArray: course13[] = [
     }
 ];
 for (const coursesArrayElement of coursesArray) {
-    let courseDiv: HTMLDivElement = document.createElement('div');
+    let courseDiv = document.createElement('div');
     courseDiv.classList.add('course-div');
-
-    let title:HTMLHeadingElement = document.createElement('h2');
+    let title = document.createElement('h2');
     title.innerText = coursesArrayElement.title;
     courseDiv.appendChild(title);
-
-    let duration: HTMLDivElement = document.createElement('div');
-    duration.innerText = `Month Duration: ${coursesArrayElement.monthDuration} Hour Duration: ${coursesArrayElement.hourDuration}`
-    courseDiv.appendChild(duration)
-
-    let ulModules: HTMLUListElement = document.createElement('ul');
+    let duration = document.createElement('div');
+    duration.innerText = `Month Duration: ${coursesArrayElement.monthDuration} Hour Duration: ${coursesArrayElement.hourDuration}`;
+    courseDiv.appendChild(duration);
+    let ulModules = document.createElement('ul');
     for (const module of coursesArrayElement.modules) {
-        let li:HTMLLIElement = document.createElement('li')
+        let li = document.createElement('li');
         li.innerText = module;
-        ulModules.appendChild(li)
+        ulModules.appendChild(li);
     }
-    courseDiv.appendChild(ulModules)
-
+    courseDiv.appendChild(ulModules);
     document.body.appendChild(courseDiv);
 }

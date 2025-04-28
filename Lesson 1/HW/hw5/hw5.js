@@ -68,7 +68,7 @@ function sortNums(array, direction) {
     return array;
 }
 console.log(sortNums(nums1, 'ascending'));
-let coursesAndDurationArray = [
+let coursesAndDurationArray1 = [
     { title: 'JavaScript Complex', monthDuration: 5 },
     { title: 'Java Complex', monthDuration: 6 },
     { title: 'Python Complex', monthDuration: 6 },
@@ -77,14 +77,14 @@ let coursesAndDurationArray = [
     { title: 'Frontend', monthDuration: 4 }
 ];
 //  -- відсортувати його за спаданням за monthDuration
-let sortedCourses = coursesAndDurationArray.sort((a, b) => {
+let sortedCourses = coursesAndDurationArray1.sort((a, b) => {
     return b.monthDuration - a.monthDuration;
 });
 console.log(sortedCourses);
 //  -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
-let filtredDuration = coursesAndDurationArray.filter(value => value.monthDuration >= 5);
+let filtredDuration = coursesAndDurationArray1.filter(value => value.monthDuration >= 5);
 console.log(filtredDuration);
-let mapedCourses = coursesAndDurationArray.map((value, index) => {
+let mapedCourses = coursesAndDurationArray1.map((value, index) => {
     let newCourse = {
         title: value.title,
         monthDuration: value.monthDuration,
@@ -150,7 +150,7 @@ let reducedCards = cards.reduce((accumulator, currentValue) => {
     clubs: []
 });
 console.log(reducedCards);
-let coursesArray = [
+let coursesArray1 = [
     {
         title: 'JavaScript Complex',
         monthDuration: 5,
