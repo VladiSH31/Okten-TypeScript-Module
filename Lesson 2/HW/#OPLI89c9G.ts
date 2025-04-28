@@ -2,12 +2,13 @@
 // – Є масив:
 // [‘Main’,’Products’,’About us’,’Contacts’]
 // Зробити ul в середині якої будуть лежати елементи масиву (кожен в своєму li)
-let arr = ['Main','Products','About us','Contacts'];
+
+let arr1: string[] = ['Main','Products','About us','Contacts'];
 
 let ul = document.createElement('ul');
 
-for (const item of arr) {
-    let li = document.createElement('li');
+for (const item of arr1) {
+    let li: HTMLLIElement = document.createElement('li');
     li.innerText = item;
     ul.appendChild(li)
 }
