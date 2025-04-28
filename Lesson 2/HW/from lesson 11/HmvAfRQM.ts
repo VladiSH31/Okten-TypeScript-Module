@@ -20,10 +20,13 @@ type ProductType = {
         discountedTotal: number,
         thumbnail: string
     }
+type CartsResponse = {
+    carts: CartType[]
+}
 
 fetch('https://dummyjson.com/carts')
     .then(res => res.json())
-    .then(cartsObj => {
+    .then((cartsObj: CartsResponse) => {
             const {carts} = cartsObj;
             for (const cart of carts) {
                 let divCart: HTMLDivElement = document.createElement('div');
