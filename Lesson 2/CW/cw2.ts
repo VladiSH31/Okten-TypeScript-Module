@@ -31,3 +31,12 @@ async function foobar(): Promise<IUser[]> {
     return await fetch('https://jsonplaceholder.typicode.com/users')
         .then(value => value.json());
 }
+
+type MyString = string;
+let s: MyString = 'string';
+
+type PrimitivesTypes = string | number | boolean;
+let g: PrimitivesTypes = true;
+
+type Falsy = 0 | false | '' | undefined | null
+let f: Falsy = 0;
