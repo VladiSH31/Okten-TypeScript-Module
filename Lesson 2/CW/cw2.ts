@@ -28,7 +28,6 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 
 async function foobar(): Promise<IUser[]> {
-    let promise: IUser[] = await fetch('https://jsonplaceholder.typicode.com/users')
-        .then(value => value.json())
-    return promise;
+    return await fetch('https://jsonplaceholder.typicode.com/users')
+        .then(value => value.json());
 }
