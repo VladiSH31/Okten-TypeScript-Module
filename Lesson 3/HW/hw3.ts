@@ -21,4 +21,4 @@ async function foobar2<T>(url: string) {
 }
 
 
-foobar2<dummyUser>('https://dummyjson.com/users').then(r => console.log(data))
+foobar2<IUSerDummy>('https://dummyjson.com/users').then(r => console.log(r))
