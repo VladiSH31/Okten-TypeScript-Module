@@ -3,7 +3,7 @@
 let cartsDiv = document.createElement("div");
 fetch('https://dummyjson.com/carts')
     .then(res => res.json())
-    .then(cartsObj => {
+    .then((cartsObj) => {
     const { carts } = cartsObj;
     for (const cart of carts) {
         let divCart = document.createElement('div');
