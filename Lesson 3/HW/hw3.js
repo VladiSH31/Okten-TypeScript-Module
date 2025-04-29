@@ -1,8 +1,7 @@
 "use strict";
-function foobar2(url) {
-    fetch(url)
-        .then(res => res.json())
-        .then((value) => console.log(value));
+async function foobar2(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
 }
-// 'https://dummyjson.com/users'
-foobar2('https://dummyjson.com/users');
+void foobar2('https://dummyjson.com/users');

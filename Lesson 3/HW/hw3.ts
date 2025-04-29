@@ -1,24 +1,14 @@
 interface IUSerDummy {
-    id: number,
-    firstName: string,
-    lastName: string,
-    maidenName: string,
+    id: number;
+    firstName: string;
+    lastName: string;
+    maidenName: string;
 }
 
-interface dummyUser {
-    users: IUSerDummy[];
+async function foobar2<T>(url: string): Promise<void> {
+    const response = await fetch(url);
+    const data: T = await response.json();
+    console.log(data);
 }
 
-async function foobar2<T>(url: string) {
-    if (!url) {
-        let result = await fetch(url)
-        const data: T = await result.json();
-        return data;
-    } else {
-        throw new Error('Error');
-    }
-
-}
-
-
-foobar2<IUSerDummy>('https://dummyjson.com/users').then(r => console.log(r))
+void foobar2<IUSerDummy[]>('https://dummyjson.com/users');
